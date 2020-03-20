@@ -49,6 +49,11 @@ dependencies {
     testCompile "org.spockframework:spock-core:1.1-groovy-2.4"
 }
 
+jacoco {
+    toolVersion = "0.8.5"
+    reportsDir = file("$buildDir/customJacocoReportDir")
+}
+
 jacocoTestReport {
     reports {
         html.destination new File("${buildDir}/jacocoHtml")
